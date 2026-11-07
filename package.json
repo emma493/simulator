@@ -1,7 +1,7 @@
 {
   "name": "simulator",
   "version": "1.0.0",
-  "description": "Character creation simulator - Cloudflare Worker deployment",
+  "description": "Character creation simulator - Cloudflare Worker deployment (v2)",
   "private": true,
   "scripts": {
     "build": "node scripts/build.js",
