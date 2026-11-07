@@ -3,5 +3,4 @@
 /assets/*   /assets/:splat   200
 /cdn/*      /cdn/:splat      200
 
-# SPA fallback - all other routes serve index.html for client-side routing
-/*          /index.html      200
+# SPA fallback handled by Cloudflare Pages automatically (see _routes.json)
