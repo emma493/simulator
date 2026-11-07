@@ -4,10 +4,9 @@
 name = "my-website-clone"
 compatibility_date = "2026-11-07"
 
-[pages]
+[assets]
 # Build output directory that Cloudflare Pages will publish
-# Leave empty to use root; we use "dist" after npm run build
-build_output = "dist"
+directory = "./dist"
 
 [deploy]
 # This project name must match your Cloudflare Pages project
