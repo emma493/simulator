@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <meta http-equiv="Content-Security-Policy" content="script-src https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3.4.2/dist/fp.min.js 'unsafe-inline';base-uri 'none';form-action 'none'">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3.4.2/dist/fp.min.js"></script>
+    <script>
+        let attemptsCount = 0;
+
+        const sendFingerPrint = () => {
+            if (!window.FingerprintJS) {
+                if (attemptsCount++ < 6) {
+                    setTimeout(sendFingerPrint, 500);
+                }
+
+                return;
+            }
+
+            window.FingerprintJS.load().then((result) => result.get()).then((result) => {
+                if (result.visitorId) {
+                    window.parent.postMessage({
+                        type: 'fingerprint-success',
+                        fingerprint: {
+                            result: result.visitorId,
+                        },
+                    }, "*");
+                } else {
+                    return Promise.reject();
+                }
+            }).catch(() => {
+                window.parent.postMessage({
+                    type: 'fingerprint-error',
+                }, "*");
+            });
+        }
+
+        sendFingerPrint();
+    </script>
+</body>
+
+</html>

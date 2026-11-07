@@ -1,6 +1,6 @@
 const version = 'v3';
 const cacheName = `${version}::cache`;
-const logoPath = `/cdn/front/images/lovescape-logo.svg`;
+const logoPath = `https://cdn.lovescape.com/cdn/front/images/lovescape-logo.svg`;
 const defaultCacheList = [
     '/pwa-offline.html',
     logoPath

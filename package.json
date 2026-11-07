@@ -1,14 +1,12 @@
 {
-  "name": "my-website-clone",
+  "name": "simulator",
   "version": "1.0.0",
-  "description": "Cloned website frontend — deployed via GitHub + Cloudflare Pages",
+  "description": "Character creation simulator - Cloudflare Pages deployment",
   "private": true,
   "scripts": {
     "build": "node scripts/build.js",
     "dev": "node scripts/dev.js",
-    "deploy": "wrangler pages deploy dist --project-name my-website-clone",
-    "preview": "wrangler pages dev dist",
-    "test": "python ../web_clone_tools/site_tester.py dist"
+    "deploy": "wrangler pages deploy dist --project-name simulator"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"

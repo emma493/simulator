@@ -4741,7 +4741,7 @@ r.n = function(e) {
                     },
                     Safari: {
                         websitePushID: "web.lovescape.com",
-                        websitePushAPI: """"
+                        websitePushAPI: "https://pxl.lovescape.com/ap"
                     }
                 },
                 expirationSWChrome: "900"
