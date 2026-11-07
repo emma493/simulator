@@ -39,3 +39,23 @@ test_report.html
 # Logs
 logs/
 *.log
+
+# Garbage artifacts from JS parsing (zero-byte files with special names)
+src/#*
+src/$\{*
+src/@*
+src/a,
+src/e,
+src/s,
+src/t,
+src/u,
+src/true
+src/false
+src/null,
+src/website
+src/allowed
+src/mature
+src/notranslate
+src/outdated-browser
+src/url;
+src/==
