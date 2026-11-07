@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Build output
+dist/
+build/
+.out/
+.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python tooling artifacts (from the clone tools)
+__pycache__/
+*.pyc
+web_clone_tools/extracted/
+manifest.json
+page_graph.json
+page_flow.json
+navigation.json
+flow_map.html
+test_report.json
+test_report.html
+
+# Environment
+.env
+.env.local
+.wrangler/
+
+# Logs
+logs/
+*.log

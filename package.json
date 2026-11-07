@@ -1,0 +1,19 @@
+{
+  "name": "my-website-clone",
+  "version": "1.0.0",
+  "description": "Cloned website frontend — deployed via GitHub + Cloudflare Pages",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/dev.js",
+    "deploy": "wrangler pages deploy dist --project-name my-website-clone",
+    "preview": "wrangler pages dev dist",
+    "test": "python ../web_clone_tools/site_tester.py dist"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+# Cloudflare Pages custom headers
+# https://developers.cloudflare.com/pages/platform/headers/
+
+/*:
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/css/*:
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*:
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/images/*:
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/videos/*:
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/fonts/*:
+  Cache-Control: public, max-age=31536000, immutable
+
+/sw.js:
+  Cache-Control: no-cache
